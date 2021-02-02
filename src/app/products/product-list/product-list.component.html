@@ -1,0 +1,19 @@
+<div class="container-fluid">
+	<div class="row mb-2">
+		<div class="col bg-secondary py-2">
+			<h2 class="text-white">Category {{ catId }}</h2>
+		</div>
+	</div>
+	<div class="row px-2 px-md-5 mx-md-5">
+		<div class="col-12 col-sm-6 col-md-3" *ngFor="let product of products">
+			<a [routerLink]="['/products', 'product', product.id]" class="text-reset text-decoration-none">
+				<div class="card text-center">
+					<img src="{{ product.imgPath }}" class="card-img-top" />
+					<div class="card-body">
+						<p class="card-text">{{ product.name }}</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-uppercase pt-5">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Mehak Spices</a>
+
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarCollapse"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end pe-md-3" id="navbarCollapse">
+			<div class="navbar-nav">
+				<a class="nav-link mx-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+				<a class="nav-link mx-2" [routerLink]="['/about-us']" routerLinkActive="active">About Us</a>
+				<div class="dropdown mx-2">
+					<a
+						class="nav-link dropdown-toggle"
+						id="navbarDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+						[routerLink]="['/products']"
+						routerLinkActive="active"
+						[routerLinkActiveOptions]="{ exact: false }"
+						>Products</a
+					>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" [routerLink]="['/products', 'category', '1']" routerLinkActive="active">Category 1</a>
+						<a class="dropdown-item" [routerLink]="['/products', 'category', '2']" routerLinkActive="active">Category 2</a>
+						<a class="dropdown-item" [routerLink]="['/products', 'category', '3']" routerLinkActive="active">Category 3</a>
+					</div>
+				</div>
+				<a class="nav-link mx-2" [routerLink]="['/contact-us']" routerLinkActive="active">Contact Us</a>
+			</div>
+			<form>
+				<div class="input-group mx-2">
+					<button class="btn btn-outline-secondary" type="button" id="searchIcon"><i class="bi bi-search"></i></button>
+					<input class="form-control" type="search" placeholder="Search" aria-describedby="searchIcon" />
+				</div>
+			</form>
+		</div>
+	</div>
+</nav>
